@@ -15,52 +15,121 @@ var context = vm.createContext({
 	global:global
 });
 
-var includeScript = function(name) {
-	var filename = path.resolve(__dirname, name);
-	throw new Error("***** dirname: " + __dirname);
-	console.log("trying to resolve", name, "in directory: ", __dirname);
-	return vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
-};
-
 /* include libraries */
-includeScript('./platform.js');
-includeScript('./lib/util/defaults.js');
-includeScript('./lib/util/bufferutils.js');
-includeScript('../common/lib/util/utils.js');
-includeScript('./lib/util/http.js');
-includeScript('../common/lib/util/defaults.js');
-includeScript('../common/lib/util/eventemitter.js');
-includeScript('../common/lib/util/logger.js');
-includeScript('../common/lib/util/multicaster.js');
-includeScript('./lib/util/crypto.js');
-includeScript('../common/lib/types/errorinfo.js');
-includeScript('../common/lib/types/message.js');
-includeScript('../common/lib/types/presencemessage.js');
-includeScript('../common/lib/types/protocolmessage.js');
-includeScript('../common/lib/types/stats.js');
-includeScript('../common/lib/types/devicedetails.js');
-includeScript('../common/lib/types/pushchannelsubscription.js');
-includeScript('../common/lib/transport/connectionerror.js');
-includeScript('../common/lib/transport/messagequeue.js');
-includeScript('../common/lib/transport/protocol.js');
-includeScript('../common/lib/transport/connectionmanager.js');
-includeScript('../common/lib/transport/transport.js');
-includeScript('../common/lib/transport/websockettransport.js');
-includeScript('../common/lib/transport/comettransport.js');
-includeScript('../common/lib/client/resource.js');
-includeScript('../common/lib/client/paginatedresource.js');
-includeScript('../common/lib/client/auth.js');
-includeScript('../common/lib/client/connectionstatechange.js');
-includeScript('../common/lib/client/channelstatechange.js');
-includeScript('../common/lib/client/connection.js');
-includeScript('../common/lib/client/presence.js');
-includeScript('../common/lib/client/push.js');
-includeScript('../common/lib/client/channel.js');
-includeScript('../common/lib/client/realtimechannel.js');
-includeScript('../common/lib/client/realtimepresence.js');
-includeScript('../common/lib/client/rest.js');
-includeScript('../common/lib/client/realtime.js');
-includeScript('./lib/transport/nodecomettransport.js');
+var filename = path.resolve(__dirname, './platform.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, './lib/util/defaults.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, './lib/util/bufferutils.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/util/utils.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, './lib/util/http.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/util/defaults.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/util/eventemitter.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/util/logger.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/util/multicaster.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, './lib/util/crypto.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/errorinfo.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/message.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/presencemessage.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/protocolmessage.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/stats.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/devicedetails.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/types/pushchannelsubscription.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/connectionerror.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/messagequeue.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/protocol.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/connectionmanager.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/transport.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/websockettransport.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/transport/comettransport.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/resource.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/paginatedresource.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/auth.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/connectionstatechange.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/channelstatechange.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/connection.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/presence.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/push.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/channel.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/realtimechannel.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/realtimepresence.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/rest.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, '../common/lib/client/realtime.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
+filename = path.resolve(__dirname, './lib/transport/nodecomettransport.js');
+vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
+
 
 var Realtime = module.exports = context.Realtime;
 Realtime.BufferUtils = context.BufferUtils;
