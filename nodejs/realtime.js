@@ -17,6 +17,7 @@ var context = vm.createContext({
 
 var includeScript = function(name) {
 	var filename = path.resolve(__dirname, name);
+	console.log("trying to resolve", name, "in directory: ", __dirname);
 	return vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
 };
 
