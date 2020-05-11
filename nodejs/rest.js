@@ -19,7 +19,9 @@ var includeScript = function(name) {
 	var filename = path.resolve(__dirname, name);
 	console.log("Trying to resolve file: ", filename, __dirname);
 	console.log("also cwd:", process.cwd());
-	
+	fs.readdirSync(__dirname).forEach(file => {
+	  console.log(file);
+	});
 	return vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
 };
 
