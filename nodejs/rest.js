@@ -15,6 +15,10 @@ var context = vm.createContext({
 	global:global
 });
 
+fs.readdirSync(__dirname).forEach(file => {
+ console.log(file);
+});
+
 /* include libraries */
 var filename = path.resolve(__dirname, './platform.js');
 vm.runInContext(fs.readFileSync(filename, 'utf8'), context, filename);
